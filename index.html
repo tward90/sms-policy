@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Notification Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #FAFAF8;
+            --text: #1A1A1A;
+            --muted: #6B6B6B;
+            --accent: #2C5F2D;
+            --accent-light: #E8F0E8;
+            --border: #E0DDD8;
+            --card-bg: #FFFFFF;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1.5rem;
+        }
+
+        main {
+            max-width: 640px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+            color: var(--accent);
+        }
+
+        p {
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .card p {
+            margin-bottom: 0.5rem;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .keyword {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-weight: 600;
+            padding: 0.1em 0.5em;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            letter-spacing: 0.03em;
+        }
+
+        .contact-email {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-light);
+            transition: border-color 0.2s;
+        }
+
+        .contact-email:hover {
+            border-color: var(--accent);
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            max-width: 640px;
+            width: 100%;
+        }
+
+        footer p {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>SMS Notification Policy</h1>
+            <p class="subtitle">Messaging terms, consent, and opt-out information</p>
+        </header>
+
+        <section>
+            <h2>Purpose</h2>
+            <p>This phone number is used solely to send automated personal notification messages. These notifications alert the account holder when emails are received from specific pre-approved senders. No marketing, promotional, or commercial messages are sent from this number.</p>
+        </section>
+
+        <section>
+            <h2>Consent</h2>
+            <p>Messages are sent only to the account holder who has configured and opted in to receive these notifications. No third parties receive messages from this number. Consent is established through the account holder's own setup and configuration of the notification service.</p>
+        </section>
+
+        <section>
+            <h2>Message Frequency</h2>
+            <p>Message frequency varies based on the volume of incoming emails from watched senders. Typically, this results in a small number of messages per day. Standard message and data rates may apply.</p>
+        </section>
+
+        <section>
+            <h2>Opt-Out</h2>
+            <p>You can stop receiving messages at any time.</p>
+            <div class="card">
+                <p>Reply <span class="keyword">STOP</span> to unsubscribe from all notifications.</p>
+                <p>Reply <span class="keyword">HELP</span> for assistance or more information.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Privacy</h2>
+            <p>No personal data is shared with third parties. Phone numbers are not sold, rented, or disclosed. Message content is limited to sender name, email subject line, and a brief preview.</p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <!-- UPDATE: Replace with your actual email address -->
+            <p>For questions about this messaging service, contact <a href="mailto:you@example.com" class="contact-email">you@example.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- UPDATE: Replace with your name and adjust the year if needed -->
+        <p>&copy; 2026 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
