@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Notification Opt-In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #FAFAF8;
+            --text: #1A1A1A;
+            --muted: #6B6B6B;
+            --accent: #2C5F2D;
+            --accent-light: #E8F0E8;
+            --border: #E0DDD8;
+            --card-bg: #FFFFFF;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1.5rem;
+        }
+
+        main {
+            max-width: 640px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+            color: var(--accent);
+        }
+
+        p {
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .consent-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .consent-box p {
+            margin-bottom: 1rem;
+        }
+
+        .consent-box p:last-of-type {
+            margin-bottom: 1.5rem;
+        }
+
+        .consent-items {
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .consent-items li {
+            font-size: 0.95rem;
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .consent-items li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .opt-in-button {
+            display: inline-block;
+            background: var(--accent);
+            color: #FFFFFF;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+
+        .opt-in-button:hover {
+            background: #1E4620;
+        }
+
+        .confirmation {
+            display: none;
+            background: var(--accent-light);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: var(--accent);
+        }
+
+        .info-card {
+            background: #F5F5F3;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .info-card p {
+            margin-bottom: 0.4rem;
+        }
+
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .keyword {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-weight: 600;
+            padding: 0.1em 0.45em;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        a.policy-link {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-light);
+            transition: border-color 0.2s;
+        }
+
+        a.policy-link:hover {
+            border-color: var(--accent);
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            max-width: 640px;
+            width: 100%;
+        }
+
+        footer p {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>SMS Notification Opt-In</h1>
+            <p class="subtitle">Subscribe to receive email alert notifications via text message</p>
+        </header>
+
+        <section>
+            <h2>What You'll Receive</h2>
+            <p>By opting in, you agree to receive automated SMS notifications when emails arrive from specific pre-approved senders. These messages are informational only — no marketing or promotional content will be sent.</p>
+        </section>
+
+        <div class="consent-box">
+            <h2>Opt-In Consent</h2>
+            <p>By clicking the button below, you agree to the following:</p>
+            <ul class="consent-items">
+                <li>You consent to receive automated SMS notifications at the phone number you have configured.</li>
+                <li>Message frequency varies depending on incoming email volume.</li>
+                <li>Message and data rates may apply.</li>
+                <li>You can opt out at any time by replying <span class="keyword">STOP</span>.</li>
+                <li>Reply <span class="keyword">HELP</span> for assistance.</li>
+            </ul>
+            <!-- UPDATE: Replace href with the URL of your SMS policy page -->
+            <p>Please review our <a href="/sms-policy" class="policy-link">SMS Notification Policy</a> for full details.</p>
+            <button class="opt-in-button" onclick="document.getElementById('confirmation').style.display='block'; this.style.display='none';">
+                I Agree — Opt In to SMS Notifications
+            </button>
+            <div class="confirmation" id="confirmation">
+                ✓ You have successfully opted in to SMS notifications. You will begin receiving text message alerts from your configured notification service.
+            </div>
+        </div>
+
+        <section>
+            <h2>How to Opt Out</h2>
+            <div class="info-card">
+                <p>Reply <span class="keyword">STOP</span> to any message to unsubscribe immediately.</p>
+                <p>Reply <span class="keyword">HELP</span> for support information.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <!-- UPDATE: Replace with your actual email address -->
+            <p>Questions? Contact <a href="mailto:tyler.ward@example.com" class="policy-link">tyler.ward@example.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- UPDATE: Replace with your name -->
+        <p>&copy; 2026 Tyler Ward. All rights reserved.</p>
+    </footer>
+</body>
+</html>
