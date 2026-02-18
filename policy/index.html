@@ -115,6 +115,17 @@
             border-color: var(--accent);
         }
 
+        a.link {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-light);
+            transition: border-color 0.2s;
+        }
+
+        a.link:hover {
+            border-color: var(--accent);
+        }
+
         footer {
             margin-top: 2rem;
             padding-top: 2rem;
@@ -134,7 +145,7 @@
         <header>
             <h1>SMS Notification Policy</h1>
             <p class="subtitle">Messaging terms, consent, and opt-out information</p>
-            <p>In order to opt-in, please visit our <a href="../" class="optin-link">opt-in</a> page.</p>
+            <p>In order to opt-in, please visit our <a class="link"href="../" class="optin-link">opt-in</a> page.</p>
         </header>
 
         <section>
